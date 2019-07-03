@@ -1,0 +1,101 @@
+
+/* cabecera */
+header, #titulo{
+    background-color: #5b7989;
+    border-radius: 10px 10px 0px 0px;
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px #02010a;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+nav, a {
+    text-align: right;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/* contenido */
+
+body{
+
+    background:  #02010a;
+
+
+}
+div{
+    margin: 0px;
+    vertical-align: middle;
+}
+
+.contenido{
+    margin: auto;
+
+}
+
+.principal{
+    align-content: center;
+    background: #82c3a6;
+}
+
+.secundaria{
+    background-color:  #d5c75f;
+    border-width: 1px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+figure{
+    margin: 0px;
+    padding: 2%;
+    text-align: center;
+}
+
+ img{
+    width: 100%;
+vertical-align: middle;
+}
+@media (min-width:900px) {
+    .contenido {
+        max-width: 900px;
+    }
+
+    div [class*="bloque"]{
+        width: 50%;
+    }
+    .secundaria{
+        flex-wrap: nowrap;
+    }
+
+}
+
+@media (max-width:900px) {
+    .contenido {
+        max-width: 100%;
+    }
+    div [class*="bloque"]{
+        width: 100%;
+    }
+    .secundaria{
+        flex-wrap: wrap;
+    }
+}
+
+p{
+    margin: 0px;
+}
+/* pie de pagina */
+footer{
+    background-color: #C6d5c5;
+    border-radius: 0px 0px 10px 10px;
+    text-align: left;
+    color: white;
+
+}
