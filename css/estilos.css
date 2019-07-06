@@ -23,12 +23,11 @@ nav, a {
 body{
 
     background:  #02010a;
-
-
 }
+
 div{
     margin: 0px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 
 .contenido{
@@ -48,6 +47,7 @@ div{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
 
 }
 
@@ -58,20 +58,61 @@ figure{
     text-align: center;
 }
 
- img{
+figure img{
     width: 100%;
-vertical-align: middle;
+    vertical-align: middle;
+    border: 2px solid #02010a;
 }
+
+
+/* pie de pagina */
+footer {
+    background-color: #C6d5c5;
+    border-radius: 0px 0px 10px 10px;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+footer a{
+    color: black;
+}
+
+img[src*=".jpg"]{
+  border-radius: 50px 0px 50px 0px;
+}
+
+img[src*=".svg"]{
+  border-radius: 50% 0% 0% 50%;;
+}
+
+
+.pie{
+    display: flex;
+    font-size: 0.8em;
+    padding: 0px 10px 0px 10px;
+    align-items: flex-start;
+    justify-items: center;
+}
+
+
+/* NOTE: Configuración de pantalla de dispositivos */
+
 @media (min-width:900px) {
     .contenido {
         max-width: 900px;
     }
 
-    div [class*="bloque"]{
+    div[class*="bloque"]{
         width: 50%;
     }
     .secundaria{
         flex-wrap: nowrap;
+    }
+
+    div[class*="pie"]{
+        flex: 1 1 25%;
+        flex-direction: row;
     }
 
 }
@@ -80,22 +121,42 @@ vertical-align: middle;
     .contenido {
         max-width: 100%;
     }
-    div [class*="bloque"]{
+    div[class*="bloque"]{
         width: 100%;
     }
     .secundaria{
         flex-wrap: wrap;
     }
+    div[class*="pie"]{
+        flex: 1 1 100%;
+        flex-direction: column;
+    }
 }
 
-p{
-    margin: 0px;
-}
-/* pie de pagina */
-footer{
-    background-color: #C6d5c5;
-    border-radius: 0px 0px 10px 10px;
-    text-align: left;
-    color: white;
 
+
+/* NOTE:Efectos de animación  */
+
+@keyframes rotar {
+    from{
+        transform: rotate(10deg);
+        border: 2px solid #82c3a6;
+    }
+}
+
+
+@keyframes traslacion {
+    from{
+        transform: translate(20px,-5px);
+        border: 2px solid #82c3a6;
+    }
+}
+
+
+.bloque1 img:hover{
+    animation: rotar 3s;
+}
+
+.bloque2 img:hover{
+    animation: traslacion 3s;
 }
